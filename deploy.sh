@@ -13,7 +13,7 @@ set -e
 
 # ── CONFIGURE THESE ──────────────────────────────────────────────────────────
 GODOT_EXPORT_DIR="$HOME/Documents/godots/flyingsahurweb"
-SITE_DIR="$HOME/Projects/flying-sahur"          # GitHub Pages repo root
+SITE_DIR="$HOME/FlyingSahur"          # GitHub Pages repo root
 # ─────────────────────────────────────────────────────────────────────────────
 
 GAME_DIR="$SITE_DIR/game"
