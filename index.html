@@ -17,28 +17,34 @@
   -->
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #0d0d0f;
-      --surface:   #16161a;
-      --border:    #2a2a30;
-      --text:      #e8e6f0;
-      --muted:     #6b6880;
-      --accent:    #ffffff;
-      --accent2:   #ffffff;
-      --game-w:    960px;
-      --game-h:    540px;
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html, body {
+    :root {
+      --bg: #0d0d0f;
+      --surface: #16161a;
+      --border: #2a2a30;
+      --text: #ffffff;
+      --muted: #bfbfbf;
+      --accent: #ffffff;
+      --accent2: #ffffff;
+      --game-w: 960px;
+      --game-h: 540px;
+    }
+
+    html,
+    body {
       min-height: 100%;
       background: var(--bg);
       color: var(--text);
-      font-family: 'Segoe UI', system-ui, sans-serif;
+      font-family: "Segoe UI", system-ui, sans-serif;
     }
 
-    /* ── HEADER ── */
+    /* HEADER */
+
     header {
       display: flex;
       align-items: center;
@@ -52,13 +58,17 @@
       font-size: 1.1rem;
       font-weight: 700;
       letter-spacing: 0.04em;
-      color: var(--accent);
+      color: #ffffff;
       text-decoration: none;
     }
 
-    .logo span { color: var(--text); font-weight: 400; }
+    .logo span {
+      color: #ffffff;
+      font-weight: 400;
+    }
 
-    /* ── TOP LEADERBOARD AD ── */
+    /* TOP AD */
+
     .ad-top {
       display: flex;
       justify-content: center;
@@ -70,7 +80,8 @@
       padding: 8px 0;
     }
 
-    /* ── MAIN LAYOUT ── */
+    /* MAIN */
+
     .main {
       display: flex;
       justify-content: center;
@@ -81,7 +92,8 @@
       margin: 0 auto;
     }
 
-    /* ── SIDEBAR ADS ── */
+    /* SIDEBAR ADS */
+
     .ad-sidebar {
       flex-shrink: 0;
       width: 160px;
@@ -91,7 +103,8 @@
       padding-top: 4px;
     }
 
-    /* ── GAME COLUMN ── */
+    /* GAME COLUMN */
+
     .game-column {
       display: flex;
       flex-direction: column;
@@ -106,16 +119,17 @@
       font-size: 1.6rem;
       font-weight: 800;
       letter-spacing: 0.02em;
-      color: var(--text);
+      color: #ffffff;
       text-align: center;
     }
 
     .game-title em {
       font-style: normal;
-      color: var(--accent);
+      color: #ffffff;
     }
 
-    /* ── GAME FRAME ── */
+    /* GAME */
+
     .game-wrap {
       position: relative;
       width: var(--game-w);
@@ -134,7 +148,6 @@
       display: block;
     }
 
-    /* Loading overlay */
     .game-loading {
       position: absolute;
       inset: 0;
@@ -150,20 +163,27 @@
       transition: opacity 0.4s;
     }
 
-    .game-loading.hidden { opacity: 0; }
+    .game-loading.hidden {
+      opacity: 0;
+    }
 
     .spinner {
       width: 32px;
       height: 32px;
       border: 3px solid var(--border);
-      border-top-color: var(--accent);
+      border-top-color: #ffffff;
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
 
-    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
 
-    /* ── BELOW-GAME AD ── */
+    /* BELOW GAME AD */
+
     .ad-below {
       display: flex;
       justify-content: center;
@@ -172,7 +192,8 @@
       min-height: 90px;
     }
 
-    /* ── AD PLACEHOLDER STYLE (remove once real ads are in) ── */
+    /* PLACEHOLDER ADS */
+
     .ad-placeholder {
       display: flex;
       align-items: center;
@@ -187,11 +208,23 @@
       text-transform: uppercase;
     }
 
-    .ad-placeholder.leaderboard { width: 728px; height: 90px; }
-    .ad-placeholder.rectangle  { width: 160px; height: 600px; }
-    .ad-placeholder.banner     { width: 728px; height: 90px; }
+    .ad-placeholder.leaderboard {
+      width: 728px;
+      height: 90px;
+    }
 
-    /* ── FOOTER ── */
+    .ad-placeholder.rectangle {
+      width: 160px;
+      height: 600px;
+    }
+
+    .ad-placeholder.banner {
+      width: 728px;
+      height: 90px;
+    }
+
+    /* FOOTER */
+
     footer {
       border-top: 1px solid var(--border);
       padding: 18px 24px;
@@ -199,119 +232,96 @@
       justify-content: space-between;
       align-items: center;
       font-size: 0.8rem;
-      color: var(--muted);
+      color: #ffffff;
       flex-wrap: wrap;
       gap: 8px;
     }
 
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--text); }
+    footer a {
+      color: #ffffff;
+      text-decoration: none;
+    }
 
-    /* ── RESPONSIVE ── */
+    footer a:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+
     @media (max-width: 1100px) {
-      .ad-sidebar { display: none; }
+      .ad-sidebar {
+        display: none;
+      }
     }
 
     @media (max-width: 680px) {
       .ad-placeholder.leaderboard,
-      .ad-placeholder.banner { width: 320px; height: 50px; }
+      .ad-placeholder.banner {
+        width: 320px;
+        height: 50px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- HEADER -->
   <header>
     <a class="logo" href="#">Flying Sahur <span>by Rad Hen Games</span></a>
   </header>
 
-  <!-- TOP LEADERBOARD AD -->
   <div class="ad-top">
-    <!-- ADSENSE LEADERBOARD (728×90)
-         Replace placeholder div with real ad unit once approved:
-
-    <ins class="adsbygoogle"
-         style="display:inline-block;width:728px;height:90px"
-         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-         data-ad-slot="XXXXXXXXXX"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    -->
     <div class="ad-placeholder leaderboard">Ad · 728×90</div>
   </div>
 
-  <!-- MAIN -->
   <div class="main">
 
-    <!-- LEFT SIDEBAR AD -->
     <aside class="ad-sidebar">
-      <!-- ADSENSE RECTANGLE (160×600)
-           Replace placeholder div with real ad unit once approved:
-
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:160px;height:600px"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
       <div class="ad-placeholder rectangle">Ad · 160×600</div>
     </aside>
 
-    <!-- GAME COLUMN -->
     <div class="game-column">
-      <h1 class="game-title">Flying <em>Sahur</em></h1>
 
-      <div class="game-wrap" id="gameWrap">
+      <h1 class="game-title">
+        Flying <em>Sahur</em>
+      </h1>
+
+      <div class="game-wrap">
+
         <div class="game-loading" id="loadingOverlay">
           <div class="spinner"></div>
           <span>Loading game…</span>
         </div>
-        <!-- The Godot HTML5 export lives in /game/index.html -->
+
         <iframe
           id="gameFrame"
           src="game/index.html"
-          allowfullscreen
+          title="Flying Sahur"
           allow="autoplay; fullscreen"
-          title="Flying Sahur game"
-          onload="document.getElementById('loadingOverlay').classList.add('hidden')"
-        ></iframe>
+          allowfullscreen
+          onload="document.getElementById('loadingOverlay').classList.add('hidden')">
+        </iframe>
+
       </div>
 
-      <!-- BELOW-GAME AD -->
       <div class="ad-below">
-        <!-- ADSENSE BANNER (728×90)
-             Replace placeholder div with real ad unit once approved:
-
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:728px;height:90px"
-             data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-             data-ad-slot="XXXXXXXXXX"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        -->
         <div class="ad-placeholder banner">Ad · 728×90</div>
       </div>
+
     </div>
 
-    <!-- RIGHT SIDEBAR AD -->
     <aside class="ad-sidebar">
-      <!-- ADSENSE RECTANGLE (160×600) — same unit or a different slot
-           Replace placeholder div with real ad unit once approved:
-
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:160px;height:600px"
-           data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-           data-ad-slot="XXXXXXXXXX"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      -->
       <div class="ad-placeholder rectangle">Ad · 160×600</div>
     </aside>
 
-  </div><!-- /main -->
+  </div>
 
-  <!-- FOOTER -->
   <footer>
     <span>© 2025 Rad Hen Games</span>
     <span>
-      <a href="https://radhengames.github.io/privacy/" target="_blank">Privacy Policy</a>
+      <a href="https://radhengames.github.io/privacy/" target="_blank">
+        Privacy Policy
+      </a>
     </span>
   </footer>
 
