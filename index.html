@@ -1,328 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6190063583072126"
-     crossorigin="anonymous"></script>
-  <meta charset="UTF-8" />
-  <meta name="google-adsense-account" content="ca-pub-6190063583072126">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flying Sahur</title>
-  <meta name="description" content="Flying Sahur - dodge obstacles and fly as long as you can. Free to play in your browser." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flying Sahur</title>
+<meta name="description" content="Play Flying Sahur, a fast-paced endless flying game by Rad Hen Games. Dodge obstacles, survive longer, and beat your high score.">
 
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6190063583072126" crossorigin="anonymous"></script>
+<meta name="google-adsense-account" content="ca-pub-6190063583072126">
 
-    :root {
-      --bg: #0d0d0f;
-      --surface: #16161a;
-      --border: #2a2a30;
-      --text: #ffffff;
-      --muted: #bfbfbf;
-      --accent: #ffffff;
-      --accent2: #ffffff;
-      --game-w: 960px;
-      --game-h: 540px;
-    }
-
-    html,
-    body {
-      min-height: 100%;
-      background: var(--bg);
-      color: var(--text);
-      font-family: "Segoe UI", system-ui, sans-serif;
-    }
-
-    /* HEADER */
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 14px 24px;
-      border-bottom: 1px solid var(--border);
-      background: var(--surface);
-    }
-
-    .logo {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    .logo span {
-      color: #ffffff;
-      font-weight: 400;
-    }
-
-    /* TOP AD */
-
-    .ad-top {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      min-height: 90px;
-      padding: 8px 0;
-    }
-
-    /* MAIN */
-
-    .main {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      padding: 20px 16px;
-      max-width: 1280px;
-      margin: 0 auto;
-    }
-
-    /* SIDEBAR ADS */
-
-    .ad-sidebar {
-      flex-shrink: 0;
-      width: 160px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      padding-top: 4px;
-    }
-
-    /* GAME COLUMN */
-
-    .game-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      flex-shrink: 0;
-      width: var(--game-w);
-      max-width: 100%;
-    }
-
-    .game-title {
-      font-size: 1.6rem;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      color: #ffffff;
-      text-align: center;
-    }
-
-    .game-title em {
-      font-style: normal;
-      color: #ffffff;
-    }
-
-    /* GAME */
-
-    .game-wrap {
-      position: relative;
-      width: var(--game-w);
-      max-width: 100%;
-      aspect-ratio: 16 / 9;
-      background: #000;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-
-    .game-wrap iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
-    }
-
-    .game-loading {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: #000;
-      color: var(--muted);
-      font-size: 0.9rem;
-      pointer-events: none;
-      transition: opacity 0.4s;
-    }
-
-    .game-loading.hidden {
-      opacity: 0;
-    }
-
-    .spinner {
-      width: 32px;
-      height: 32px;
-      border: 3px solid var(--border);
-      border-top-color: #ffffff;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-    }
-
-    @keyframes spin {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* BELOW GAME AD */
-
-    .ad-below {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      min-height: 90px;
-    }
-
-    /* FOOTER */
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 18px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 0.8rem;
-      color: #ffffff;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      color: #ffffff;
-      text-decoration: underline;
-    }
-
-    /* RESPONSIVE */
-
-    @media (max-width: 1100px) {
-      .ad-sidebar {
-        display: none;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .ad-top ins,
-      .ad-below ins {
-        width: 320px;
-        height: 50px;
-      }
-    }
-  </style>
+<style>
+body{margin:0;background:#111;color:#eee;font-family:Segoe UI,Arial,sans-serif;line-height:1.7}
+header,footer{background:#1b1b1b;padding:18px;text-align:center}
+main{max-width:1100px;margin:auto;padding:20px}
+h1,h2{color:#fff}
+.game{aspect-ratio:16/9;background:#000;border:1px solid #333}
+iframe{width:100%;height:100%;border:0}
+.ad{margin:25px auto;text-align:center}
+.content{max-width:850px;margin:40px auto}
+a{color:#9fd4ff}
+</style>
 </head>
 <body>
 
-  <header>
-    <a class="logo" href="#">Flying Sahur <span>by Rad Hen Games</span></a>
-  </header>
+<header>
+<h1>Flying Sahur</h1>
+<p>Fly as far as possible, dodge obstacles, and beat your highest score.</p>
+</header>
 
-  <div class="ad-top">
-    <ins class="adsbygoogle"
-         style="display:block; width:728px; height:90px;"
-         data-ad-client="ca-pub-6190063583072126"
-         data-ad-slot="2490832895"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
-  </div>
+<main>
 
-  <div class="main">
+<div class="game">
+<iframe src="game/index.html" title="Flying Sahur" allowfullscreen></iframe>
+</div>
 
-    <aside class="ad-sidebar">
-      <ins class="adsbygoogle"
-           style="display:block; width:160px; height:600px;"
-           data-ad-client="ca-pub-6190063583072126"
-           data-ad-slot="6234636784"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </aside>
+<div class="ad">
+<ins class="adsbygoogle"
+ style="display:block"
+ data-ad-client="ca-pub-6190063583072126"
+ data-ad-slot="4374760206"
+ data-ad-format="auto"
+ data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
 
-    <div class="game-column">
+<section class="content">
+<h2>About Flying Sahur</h2>
+<p>Flying Sahur is an original endless flying game developed by Rad Hen Games. Your objective is to stay in the air for as long as possible while avoiding obstacles that become increasingly difficult as your score grows. The game is designed for quick play sessions and smooth browser performance on desktop and mobile devices.</p>
 
-      <h1 class="game-title">
-        Flying <em>Sahur</em>
-      </h1>
-      <p style="color:#bfbfbf; text-align:center; max-width:600px; font-size:0.9rem;">
-  Flying Sahur is a fast-paced endless runner. Dodge obstacles, survive as long as you can, and compete for the highest score. Free to play in your browser.
-</p>
+<p>Each run is different, encouraging players to improve their reaction time and learn the movement mechanics. Whether you are trying to beat your own record or simply enjoy a casual arcade experience, Flying Sahur offers simple controls with progressively challenging gameplay.</p>
 
-      <div class="game-wrap">
+<h2>How to Play</h2>
+<ul>
+<li>Press Space, click, or tap to fly.</li>
+<li>Avoid obstacles and stay alive.</li>
+<li>Survive longer to earn a higher score.</li>
+<li>Practice your timing to improve each run.</li>
+</ul>
 
-        <div class="game-loading" id="loadingOverlay">
-          <div class="spinner"></div>
-          <span>Loading game…</span>
-        </div>
+<h2>Features</h2>
+<ul>
+<li>Endless arcade gameplay.</li>
+<li>Fast loading with no installation required.</li>
+<li>Playable in modern web browsers.</li>
+<li>Responsive controls for desktop and mobile.</li>
+<li>Designed and developed by Rad Hen Games.</li>
+</ul>
 
-        <iframe
-          id="gameFrame"
-          src="game/index.html"
-          title="Flying Sahur"
-          allow="autoplay; fullscreen"
-          allowfullscreen
-          onload="document.getElementById('loadingOverlay').classList.add('hidden')">
-        </iframe>
+<h2>Tips</h2>
+<p>Small, controlled movements are usually better than large jumps. Try to stay near the middle of the screen so you have more time to react to upcoming obstacles. Regular practice will help you achieve higher scores.</p>
+</section>
 
-      </div>
+</main>
 
-      <div class="ad-below">
-        <ins class="adsbygoogle"
-             style="display:block; width:728px; height:90px;"
-             data-ad-client="ca-pub-6190063583072126"
-             data-ad-slot="4374760206"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-
-    </div>
-
-    <aside class="ad-sidebar">
-      <ins class="adsbygoogle"
-           style="display:block; width:160px; height:600px;"
-           data-ad-client="ca-pub-6190063583072126"
-           data-ad-slot="5879413569"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>
-           (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </aside>
-
-  </div>
-
-  <footer>
-  <span>© 2026 Rad Hen Games</span>
-  <span>
-    <a href="https://radhengames.github.io/privacy/" target="_blank">
-      Privacy Policy
-    </a>
-    &nbsp;|&nbsp;
-    <a href="https://radhengames.github.io/Credits/" target="_blank">
-      Credits
-    </a>
-  </span>
+<footer>
+<p>© 2026 Rad Hen Games</p>
+<p><a href="https://radhengames.github.io/privacy/">Privacy Policy</a> | <a href="https://radhengames.github.io/Credits/">Credits</a></p>
 </footer>
+
+</body>
 </html>
